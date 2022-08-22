@@ -1,4 +1,5 @@
 import os
+import time
 
 discord = "C:\\Users\\Quentin Steinke\\AppData\\Local\\Discord\\app-1.0.9006\\Discord.exe"
 outlook = "C:\\Program Files\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE"
@@ -9,15 +10,20 @@ blender = "blender"
 
 # Progams
 programs = [
-    #blender,
     discord,
+    teams,
+    outlook,
     #code,
-    #outlook,
-    #teams,
-    #chrome,
+    chrome,
+    blender,
     ]
 
 # Launching programs one by one
 for pro in programs:
-    os.system('"' + pro + '"')
+    if pro == teams:
+        os.system('"' + pro + '"')
+        time.sleep(2)
+    else:
+        os.system('"' + pro + '"')
+        time.sleep(2)
 #    print("start " + pro)
