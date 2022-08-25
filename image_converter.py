@@ -1,6 +1,9 @@
 from PIL import Image
 import os
-
+"""
+This script converts .png image files into .jpg files.
+It needs a subfolder named "convert" with the images you want to convert in it.
+"""
 image_path = ".\\convert\\"
 images = os.listdir(image_path)
 new_name = "Converted"
