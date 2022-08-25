@@ -5,8 +5,21 @@ This script converts .png image files into .jpg files.
 It needs a subfolder named "convert" with the images you want to convert in it.
 """
 image_path = ".\\convert\\"
-images = os.listdir(image_path)
+make_converted_dir = os.makedirs("converted")
+try:
+    make_converted_dir
+except FileExistsError:
+    pass
 new_name = "Converted"
+
+# See if you need forward-slash or back-slash for you os
+try:
+    images = os.listdir(image_path)
+except FileNotFoundError:
+    image_path = "./convert/"
+    images = os.listdir(image_path)
+else:
+    print("No 'convert' folder found")
 
 print("Change name? y/n: ")
 convert_name = input()
