@@ -1,6 +1,5 @@
-# Advanced Blender addon for exporting
+# Converting .png to .jpg images
 
-*   Duplicate objects
-*   Add custom split normals to all objects
-*   Combine objects based on parent"# Export-Combine-Blender-Addon" 
-"# Export-Combine-Blender-Addon" 
+## Setup
+* Put the python script ina folder with a subfolder called "convert"
+* Any .png file put in the "convert" folder will be converted once you run the python file
