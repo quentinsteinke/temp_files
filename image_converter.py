@@ -2,8 +2,8 @@ from PIL import Image
 import os
 
 image_path = ".\\convert\\"
-image_path_1 = "\\convert\\"
-print(image_path, image_path_1)
+
+print(image_path)
 
 # print(os.listdir(image_path))
 images = os.listdir(image_path)
@@ -18,7 +18,7 @@ if convert_name == "y":
     num = 1
 
     for i in images:
-        i = image_path_1 + i
+        i = image_path + i
         im = Image.open(i)
         con_im = im.convert("RGB")
         con_im.save(new_name + "_" + str(num) + ".jpg")
@@ -28,7 +28,7 @@ if convert_name == "n":
     pass
 
 for i in images:
-    i = image_path_1 + i
+    i = image_path + i
     im = Image.open(i)
-    con_im = im.convert("rgb")
+    con_im = im.convert("RGB")
     con_im.save(im.info("filename") + ".jpg")
