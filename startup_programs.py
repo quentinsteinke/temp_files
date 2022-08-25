@@ -20,10 +20,8 @@ programs = [
 
 # Launching programs one by one
 for pro in programs:
-    if pro == teams:
+    if pro == teams or outlook:
         os.system('"' + pro + '"')
         time.sleep(2)
     else:
         os.system('"' + pro + '"')
-        time.sleep(2)
-#    print("start " + pro)
