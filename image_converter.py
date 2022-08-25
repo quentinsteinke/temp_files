@@ -33,4 +33,4 @@ if convert_name == "n":
         con_im = im.convert("RGB")
         con_im.save(original_name + ".jpg")
 
-Print("All done!")
+print("All done!")
