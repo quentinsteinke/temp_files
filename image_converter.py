@@ -2,10 +2,6 @@ from PIL import Image
 import os
 
 image_path = ".\\convert\\"
-
-print(image_path)
-
-# print(os.listdir(image_path))
 images = os.listdir(image_path)
 new_name = "Converted"
 
@@ -25,10 +21,13 @@ if convert_name == "y":
         num += 1
 
 if convert_name == "n":
-    pass
+    for i in images:
+        i = image_path + i
+        im = Image.open(i)
+        original_name = im.filename
+        original_name = original_name.replace(image_path, "")
+        original_name = original_name.replace(".png", "")
+        con_im = im.convert("RGB")
+        con_im.save(original_name + ".jpg")
 
-for i in images:
-    i = image_path + i
-    im = Image.open(i)
-    con_im = im.convert("RGB")
-    con_im.save(im.info("filename") + ".jpg")
+Print("All done!")
